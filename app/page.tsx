@@ -1,65 +1,160 @@
-import Image from "next/image";
+"use client";
 
-export default function Home() {
+import React, { useEffect, useRef } from "react";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
+import { homePageStyles, spotlightStyles } from "@/public/dummyStyles";
+import { Spotlight } from "./components/ui/Spotlight";
+import { Cover } from "./components/ui/cover";
+import { PointerHighlight } from "./components/ui/pointer-highlight";
+
+export default function HomePage(): React.ReactElement {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.play().catch((e) => {
+        console.log("Autoplay prevented:", e);
+      });
+    }
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <div className={homePageStyles.container}>
+        <div
+          className={cn(
+            homePageStyles.backgroundGrid.wrapper,
+            homePageStyles.backgroundGrid.pattern,
+          )}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+        <Spotlight className={spotlightStyles.position} fill="#0FFF50" />
+        <div className={homePageStyles.gradientOverlay} />
+
+        <section className={homePageStyles.heroSection}>
+          <div className="relative">
+            <h1 className={homePageStyles.h1}>
+              Hey, I&apos;m{" "}
+              <span className={homePageStyles.spanWithMargin}>
+                <Cover>Faisal</Cover>
+              </span>
+            </h1>
+            <h2 className={homePageStyles.h2}>
+              AI Product {"  "}
+              <span className={homePageStyles.spanInline}>
+                <PointerHighlight>Engineer</PointerHighlight>
+              </span>
+            </h2>
+            <div className="mb-6">
+              <div className={homePageStyles.calloutCard.wrapper}>
+                <div className={homePageStyles.calloutCard.innerContainer}>
+                  <div className={homePageStyles.calloutCard.textContainer}>
+                    <svg
+                      className={homePageStyles.calloutCard.icon}
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      aria-hidden
+                    >
+                      <path d="M3 12l9-9 9 9" strokeWidth="1.2" />
+                    </svg>
+                    <div className={homePageStyles.calloutCard.text}>
+                      Connect with me on X
+                    </div>
+                  </div>
+                  <button
+                    type="button"
+                    aria-label="Follow on X"
+                    className={homePageStyles.calloutCard.button}
+                  >
+                    Follow
+                  </button>
+                </div>
+              </div>
+            </div>
+            <p className={homePageStyles.paragraph}>
+              I turn fuzzy ideas into live Products (<em>quickly</em>) —
+              full-stack AI Builder. Currently working as a Founding Engineer at{" "}
+              <a
+                className={homePageStyles.link}
+                target="_blank"
+                href="https://invoicegenerator-frontend-tdng.onrender.com/"
+              >
+                Invoice-AI
+              </a>
+              . I have built multiple products in past 2 years; raised $100K
+              funding for my startup{" "}
+              <a className={homePageStyles.link} href="#" target="_blank">
+                broscode.com
+              </a>
+            </p>
+
+            <article className={homePageStyles.article.wrapper}>
+              <div className={homePageStyles.article.videoContainer}>
+                <video
+                  ref={videoRef}
+                  className={homePageStyles.article.video}
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="auto"
+                  disablePictureInPicture
+                  disableRemotePlayback
+                  style={homePageStyles.article.videoStyles}
+                >
+                  <source src="/homevideo.webm" type="video/webm" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className={homePageStyles.article.content}>
+                <div className={homePageStyles.article.header}>
+                  <svg
+                    className={homePageStyles.article.headerIcon}
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
+                  </svg>
+                  <span>Featured Work</span>
+                </div>
+                <h3 className={homePageStyles.article.title}>
+                  My 2026: shippings, signal, and a few uncomfortable rules
+                </h3>
+
+                <p className={homePageStyles.article.description}>
+                  A candid review of 2025 into 2026. The Video above showcase
+                  some of the key projects and momoents from my journey.
+                </p>
+
+                <div className={homePageStyles.article.linkContainer}>
+                  <Link
+                    href="/projects"
+                    className={homePageStyles.article.link}
+                  >
+                    <span>See My Projects</span>
+                    <svg
+                      className={homePageStyles.article.linkIcon}
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      aria-hidden
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M14 5l7 7m0 0l-7 7m7-7H3"
+                      />
+                    </svg>
+                  </Link>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
