@@ -78,14 +78,18 @@ export default function HomePage(): React.ReactElement {
               <a
                 className={homePageStyles.link}
                 target="_blank"
-                href="https://invoicegenerator-frontend-tdng.onrender.com/"
+                href="https://hanzalatafzeel.github.io/broscodes/"
               >
-                Invoice-AI
+                Broscodes
               </a>
-              . I have built multiple products in past 2 years; raised $100K
-              funding for my startup{" "}
-              <a className={homePageStyles.link} href="#" target="_blank">
-                broscode.com
+              . I have built multiple products in past 2 years; raised funding
+              for my startup{" "}
+              <a
+                className={homePageStyles.link}
+                href="https://hanzalatafzeel.github.io/broscodes/"
+                target="_blank"
+              >
+                broscodes.com
               </a>
             </p>
 

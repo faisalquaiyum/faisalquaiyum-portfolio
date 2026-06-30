@@ -71,7 +71,7 @@ export default function AboutPage() {
                 <p className={aboutPageStyles.paragraph}>
                   Currently a Frontend Engineer at{" "}
                   <a
-                    href="https://broscodes.com"
+                    href="https://hanzalatafzeel.github.io/broscodes/"
                     className={aboutPageStyles.contentLink}
                   >
                     Broscode Services
