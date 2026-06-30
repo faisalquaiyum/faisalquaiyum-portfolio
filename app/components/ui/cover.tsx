@@ -27,7 +27,7 @@ export const Cover = ({
       const numberOfBeams = Math.floor(height / 10); // Adjust the divisor to control the spacing
       const positions = Array.from(
         { length: numberOfBeams },
-        (_, i) => (i + 1) * (height / (numberOfBeams + 1)),
+        (_, i) => (i + 1) * (height / (numberOfBeams + 1))
       );
       setBeamPositions(positions);
     }
@@ -38,7 +38,7 @@ export const Cover = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
       ref={ref}
-      className="relative hover:bg-neutral-900  group/cover inline-block dark:bg-neutral-900 bg-neutral-100 px-2 py-2  transition duration-200 rounded-sm"
+      className="relative hover:bg-neutral-900  group/cover inline-block  bg-neutral-900 px-2 py-2  transition duration-200 rounded-sm"
     >
       <AnimatePresence>
         {hovered && (
@@ -131,16 +131,16 @@ export const Cover = ({
           },
         }}
         className={cn(
-          "dark:text-white inline-block text-neutral-900 relative z-20 group-hover/cover:text-white transition duration-200",
-          className,
+          "dark:text-white inline-block  relative z-20 group-hover/cover:text-white transition duration-200",
+          className
         )}
       >
         {children}
       </motion.span>
-      <CircleIcon className="absolute -right-0.5 -top-0.5" />
-      <CircleIcon className="absolute -bottom-0.5 -right-0.5" delay={0.4} />
-      <CircleIcon className="absolute -left-0.5 -top-0.5" delay={0.8} />
-      <CircleIcon className="absolute -bottom-0.5 -left-0.5" delay={1.6} />
+      <CircleIcon className="absolute -right-[2px] -top-[2px]" />
+      <CircleIcon className="absolute -bottom-[2px] -right-[2px]" delay={0.4} />
+      <CircleIcon className="absolute -left-[2px] -top-[2px]" delay={0.8} />
+      <CircleIcon className="absolute -bottom-[2px] -left-[2px]" delay={1.6} />
     </div>
   );
 };
@@ -194,16 +194,16 @@ export const Beam = ({
             y2: 0,
           }}
           transition={{
-            duration: hovered ? 0.5 : (duration ?? 2),
+            duration: hovered ? 0.5 : duration ?? 2,
             ease: "linear",
             repeat: Infinity,
             delay: hovered ? Math.random() * (1 - 0.2) + 0.2 : 0,
-            repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : (delay ?? 1),
+            repeatDelay: hovered ? Math.random() * (2 - 1) + 1 : delay ?? 1,
           }}
         >
-          <stop stopColor="#2EB9DF" stopOpacity="0" />
-          <stop stopColor="#3b82f6" />
-          <stop offset="1" stopColor="#3b82f6" stopOpacity="0" />
+          <stop stopColor="#2edfb6" stopOpacity="0" />
+          <stop stopColor="#57f63b" />
+          <stop offset="1" stopColor="#57f63b" stopOpacity="0" />
         </motion.linearGradient>
       </defs>
     </motion.svg>
@@ -221,7 +221,7 @@ export const CircleIcon = ({
     <div
       className={cn(
         `pointer-events-none animate-pulse group-hover/cover:hidden group-hover/cover:opacity-100 group h-2 w-2 rounded-full bg-neutral-600 dark:bg-white opacity-20 group-hover/cover:bg-white`,
-        className,
+        className
       )}
     ></div>
   );
