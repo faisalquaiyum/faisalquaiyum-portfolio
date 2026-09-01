@@ -40,7 +40,7 @@ export default function HomePage(): React.ReactElement {
               </span>
             </h1>
             <h2 className={homePageStyles.h2}>
-              AI Product {"  "}
+              Full-Stack &amp; AI  {"  "}
               <span className={homePageStyles.spanInline}>
                 <PointerHighlight>Engineer</PointerHighlight>
               </span>
@@ -82,7 +82,7 @@ export default function HomePage(): React.ReactElement {
               >
                 Broscodes
               </a>
-              . I have built multiple products in past 2 years; raised funding
+              . I have built multiple products in past 2 years; raising funding
               for my startup{" "}
               <a
                 className={homePageStyles.link}

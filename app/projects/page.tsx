@@ -11,7 +11,7 @@ const TitleComponent = ({
 }: {
   title: string;
   avatar: string;
-}) => (
+}) => ( 
   <div className={s.titleComponentContainer}>
     <img
       src={avatar}
