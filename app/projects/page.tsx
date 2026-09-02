@@ -11,7 +11,7 @@ const TitleComponent = ({
 }: {
   title: string;
   avatar: string;
-}) => ( 
+}) => (
   <div className={s.titleComponentContainer}>
     <img
       src={avatar}
@@ -40,7 +40,7 @@ export default function Projects() {
               key={project.slug}
               title={
                 <TitleComponent
-                  title={project.author}
+                  title={project.title}
                   avatar={project.authorAvatar}
                 />
               }
