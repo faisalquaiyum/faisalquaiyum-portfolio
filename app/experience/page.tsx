@@ -1,136 +1,158 @@
 "use client";
 
-import { Award, Briefcase, Code2, Rocket, Users } from "lucide-react";
+import { Code2, Server, Monitor } from "lucide-react";
 import { timelineStyles as s } from "@/public/dummyStyles";
 import { Timeline } from "../components/ui/timeline";
 
 export default function TimelineDemo() {
   const data = [
     {
-      title: "2023 - Present",
+      title: "Sep 2025 - Mar 2026",
       content: (
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerBlue}>
-              <Rocket className={s.iconBlue} />
+              <Server className={s.iconBlue} />
             </div>
             <div>
               <h3 className={s.contentTitle}>
-                Frontend Engineer - Broscode Digital Services
+                Backend Developer Intern - Blue Planet Info Solutions Pvt. Ltd.
               </h3>
               <p className={s.contentTitle}>
-                Building Copilot for Insurance Industry
+                Building scalable backend services and secure RESTful APIs for
+                production applications
               </p>
-              <p className={s.contentSubtitle}>Series A Startup - Remote</p>
+              <p className={s.contentSubtitle}>
+                Internship - Pune, India - Remote - Software/IT Company
+              </p>
             </div>
           </div>
           <ul className={s.list}>
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Leading UI/UX for Copilot to automate insurance workflow
+              Engineered scalable backend services using Node.js and Next.js,
+              supporting 5K+ users/month
             </li>
-
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Build Admin App, Clent App, and Agent App for Insurance Copilot
+              Built RESTful APIs with JWT authentication and role-based access
+              control
             </li>
-
             <li className={s.listItem}>
               <span className={s.bulletBlue}></span>
-              Experimenting with emerging AI models and UX paradigms
+              Optimized MySQL queries and indexing, reducing API response
+              latency by 25%
+            </li>
+            <li className={s.listItem}>
+              <span className={s.bulletBlue}></span>
+              Contributed to backend system planning, debugging, and production
+              deployment workflows
             </li>
           </ul>
           <div className={s.techBadgesContainer}>
-            <span className={s.techBadge}>React</span>
-            <span className={s.techBadge}>TypeScript</span>
-            <span className={s.techBadge}>Tailwind</span>
-            <span className={s.techBadge}>Python</span>
+            <span className={s.techBadge}>Node.js</span>
+            <span className={s.techBadge}>Next.js</span>
+            <span className={s.techBadge}>REST APIs</span>
+            <span className={s.techBadge}>JWT</span>
+            <span className={s.techBadge}>MySQL</span>
           </div>
         </div>
       ),
     },
     {
-      title: "2021 - 2023",
-      content: (
-        <div className={s.itemContainer}>
-          <div className={s.itemFlexContainer}>
-            <div className={s.iconContainerGreen}>
-              <Users className={s.iconGreen} />
-            </div>
-            <div>
-              <h3 className={s.contentTitle}>
-                Frontend Engineer - Broscode Digital Services
-              </h3>
-              <p className={s.contentTitle}>
-                Building Copilot for Insurance Industry
-              </p>
-              <p className={s.contentSubtitle}>Series A Startup - Remote</p>
-            </div>
-          </div>
-          <ul className={s.list}>
-            <li className={s.listItem}>
-              <span className={s.bulletGreen}></span>
-              Leading UI/UX for Copilot to automate insurance workflow
-            </li>
-
-            <li className={s.listItem}>
-              <span className={s.bulletGreen}></span>
-              Build Admin App, Clent App, and Agent App for Insurance Copilot
-            </li>
-
-            <li className={s.listItem}>
-              <span className={s.bulletGreen}></span>
-              Experimenting with emerging AI models and UX paradigms
-            </li>
-          </ul>
-          <div className={s.techBadgesContainer}>
-            <span className={s.techBadge}>React</span>
-            <span className={s.techBadge}>TypeScript</span>
-            <span className={s.techBadge}>Tailwind</span>
-            <span className={s.techBadge}>Python</span>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "2020 - 2021",
+      title: "Jun 2023 - Aug 2023",
       content: (
         <div className={s.itemContainer}>
           <div className={s.itemFlexContainer}>
             <div className={s.iconContainerRose}>
-              <Users className={s.iconRose} />
+              <Monitor className={s.iconRose} />
             </div>
             <div>
-              <h3 className={s.contentTitle}>
-                Frontend Engineer - Broscode Digital Services
-              </h3>
+              <h3 className={s.contentTitle}>App Developer Intern - FTK-CIT</h3>
               <p className={s.contentTitle}>
-                Building Copilot for Insurance Industry
+                Developing Python-based desktop applications with database
+                integration and scalable application modules
               </p>
-              <p className={s.contentSubtitle}>Series A Startup - Remote</p>
+              <p className={s.contentSubtitle}>
+                Internship - Delhi, India - Onsite
+              </p>
             </div>
           </div>
           <ul className={s.list}>
             <li className={s.listItem}>
               <span className={s.bulletRose}></span>
-              Leading UI/UX for Copilot to automate insurance workflow
+              Developed Python-based desktop applications using PyQt5 with MySQL
+              integration
             </li>
-
             <li className={s.listItem}>
               <span className={s.bulletRose}></span>
-              Build Admin App, Clent App, and Agent App for Insurance Copilot
+              Improved data processing efficiency by 20% through streamlined
+              database queries
             </li>
-
             <li className={s.listItem}>
               <span className={s.bulletRose}></span>
-              Experimenting with emerging AI models and UX paradigms
+              Created user-friendly UI components and collaborated on scalable
+              application modules
+            </li>
+          </ul>
+          <div className={s.techBadgesContainer}>
+            <span className={s.techBadge}>Python</span>
+            <span className={s.techBadge}>PyQt5</span>
+            <span className={s.techBadge}>MySQL</span>
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "2023 - 2026",
+      content: (
+        <div className={s.itemContainer}>
+          <div className={s.itemFlexContainer}>
+            <div className={s.iconContainerPurple}>
+              <Code2 className={s.iconPurple} />
+            </div>
+            <div>
+              <h3 className={s.contentTitle}>Software Developer - Broscodes</h3>
+              <p className={s.contentTitle}>
+                Built and developed software products as part of a self-founded
+                startup with friends
+              </p>
+              <p className={s.contentSubtitle}>
+                Founder &amp; Development Team - Delhi, India - Remote
+              </p>
+            </div>
+          </div>
+          <ul className={s.list}>
+            <li className={s.listItem}>
+              <span className={s.bulletPurple}></span>
+              Designed and developed web applications and backend services for
+              startup products
+            </li>
+            <li className={s.listItem}>
+              <span className={s.bulletPurple}></span>
+              Built scalable APIs, database systems, and core application
+              features
+            </li>
+            <li className={s.listItem}>
+              <span className={s.bulletPurple}></span>
+              Collaborated with co-founders to plan, develop, test, and deploy
+              product features
+            </li>
+            <li className={s.listItem}>
+              <span className={s.bulletPurple}></span>
+              Worked across frontend and backend development to turn ideas into
+              functional products
             </li>
           </ul>
           <div className={s.techBadgesContainer}>
             <span className={s.techBadge}>React</span>
+            <span className={s.techBadge}>Next.js</span>
+            <span className={s.techBadge}>Node.js</span>
             <span className={s.techBadge}>TypeScript</span>
-            <span className={s.techBadge}>Tailwind</span>
-            <span className={s.techBadge}>Python</span>
+            <span className={s.techBadge}>PostgreSQL</span>
+            <span className={s.techBadge}>MongoDB</span>
+            <span className={s.techBadge}>Docker</span>
+            <span className={s.techBadge}>AWS</span>
           </div>
         </div>
       ),
@@ -145,10 +167,8 @@ export default function TimelineDemo() {
           </div>
           <h1 className={s.mainTitle}>Changelog from my journey</h1>
           <p className={s.mainParagraph}>
-            It&apos;s been working at Kay.ai for the past 1.5 years.
-            <br />
-            Here&apos;s a timeline of my journey across multiple startups and
-            projects.
+            Here&apos;s a timeline of my journey through backend and application
+            development.
           </p>
           <div className={s.legendContainer}>
             <div className={s.legendItem}>
@@ -158,12 +178,12 @@ export default function TimelineDemo() {
 
             <div className={s.legendItem}>
               <div className={`${s.legendDot} bg-purple-500`}></div>
-              <span className={s.legendText}>AI Startup</span>
+              <span className={s.legendText}>Founder Experience</span>
             </div>
 
             <div className={s.legendItem}>
-              <div className={`${s.legendDot} bg-green-500`}></div>
-              <span className={s.legendText}>Growth Startup</span>
+              <div className={`${s.legendDot} bg-rose-500`}></div>
+              <span className={s.legendText}>Previous Experience</span>
             </div>
 
             <div className={s.legendItem}>
@@ -198,7 +218,9 @@ export default function TimelineDemo() {
               </div>
             </div>
             <div className={s.techCard}>
-              <div className={`${s.techCardTitle} ${s.textEmerald}`}>Backend</div>
+              <div className={`${s.techCardTitle} ${s.textEmerald}`}>
+                Backend
+              </div>
               <div className={s.techCardContent}>
                 Node.js, Python, SQL, MongoDB
               </div>
@@ -217,9 +239,7 @@ export default function TimelineDemo() {
             </div>
             <div className={s.techCard}>
               <div className={`${s.techCardTitle} ${s.textCyan}`}>Cloud</div>
-              <div className={s.techCardContent}>
-                AWS, Azure, Google Cloud
-              </div>
+              <div className={s.techCardContent}>AWS, Azure, Google Cloud</div>
             </div>
             <div className={s.techCard}>
               <div className={`${s.techCardTitle} ${s.textRose}`}>Tools</div>
