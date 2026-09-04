@@ -87,12 +87,6 @@ const tools: Tool[] = [
     href: "https://lovable.dev",
   },
   {
-    name: "Windsurf",
-    category: "IDE",
-    icon: "/windsurf.webp",
-    href: "https://codeium.com/windsurf",
-  },
-  {
     name: "Perplexity",
     category: "Research",
     icon: "/perplexity.webp",

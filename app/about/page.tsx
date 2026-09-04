@@ -3,27 +3,33 @@ import { aboutPageStyles } from "@/public/dummyStyles";
 import { BackgroundBeamsWithCollision } from "../components/ui/background-beams-with-collision";
 
 const interests = [
+  "BACKEND DEV",
   "FULL-STACK DEV",
   "AI ENGINEER",
   "LLMS",
+  "SYSTEM DESIGN",
   "TRAVEL",
   "MUSIC",
   "F1",
-  "READING",
 ];
 
 const techStack = [
-  "React",
-  "LLM",
-  "Rails",
+  "Node.js",
   "Next.js",
   "TypeScript",
-  "Postgres",
-  "Redis",
+  "Python",
+  "React",
+  "PostgreSQL",
+  "MongoDB",
+  "AWS",
+  "Docker",
 ];
 
 const email = "mdfaisalquaiyum004@gmail.com";
-const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(email)}`;
+
+const gmailComposeUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+  email,
+)}`;
 
 export default function AboutPage() {
   return (
@@ -33,18 +39,22 @@ export default function AboutPage() {
           <div className={aboutPageStyles.backgroundEffect}>
             <BackgroundBeamsWithCollision />
           </div>
+
           <div className={aboutPageStyles.contentWrapper}>
             <h1 className={aboutPageStyles.mainHeading}>Faisal</h1>
+
             <div className={aboutPageStyles.interestsContainer}>
               {interests.map((interest, index) => (
                 <span key={interest} className={aboutPageStyles.interestItem}>
                   {interest}
+
                   {index < interests.length - 1 && (
                     <span className={aboutPageStyles.interestSeparator}>•</span>
                   )}
                 </span>
               ))}
             </div>
+
             <div className={aboutPageStyles.techStackContainer}>
               {techStack.map((tech) => (
                 <span key={tech} className={aboutPageStyles.techPill}>
@@ -52,67 +62,98 @@ export default function AboutPage() {
                 </span>
               ))}
             </div>
-            {/* Content Section */}
+
             <div className={aboutPageStyles.sectionsContainer}>
               {/* Who I Am */}
               <section>
                 <h2 className={aboutPageStyles.sectionHeading}>Who I Am</h2>
+
                 <p className={aboutPageStyles.paragraph}>
-                  Hello! I&apos;m Faisal, a software engineer passionate about
-                  building tools that simplify people&apos;s lives. I&apos;ve
-                  been coding since 2018, writing about AI, LLMs, frontend,
-                  backend, Rails and databases.
+                  Hello! I&apos;m Faisal, a backend-focused software engineer
+                  passionate about building scalable systems, APIs, and
+                  AI-powered applications. I enjoy solving complex problems with
+                  clean architecture, strong fundamentals, and practical
+                  engineering.
                 </p>
               </section>
 
               {/* What I Do */}
               <section>
                 <h2 className={aboutPageStyles.sectionHeading}>What I Do</h2>
+
                 <p className={aboutPageStyles.paragraph}>
-                  Currently a Frontend Engineer at{" "}
-                  <a
-                    href="https://hanzalatafzeel.github.io/broscodes/"
-                    className={aboutPageStyles.contentLink}
-                  >
-                    Broscode Services
-                  </a>
-                  , building workflow automation for insurance brokers. I focus
-                  on building practical, user-facing products - less demo
-                  energy, more things people actually use daily.
+                  I build scalable backend systems, RESTful APIs, and full-stack
+                  applications, with a growing focus on AI-powered products and
+                  LLM applications. I work with technologies like Node.js,
+                  Next.js, Python, PostgreSQL, MongoDB, Docker, and AWS to turn
+                  ideas into reliable, production-ready software.
                 </p>
               </section>
 
               {/* My Journey */}
               <section>
                 <h2 className={aboutPageStyles.sectionHeading}>My Journey</h2>
+
                 <p className={aboutPageStyles.paragraph}>
-                  core member of Broscode Services, Engagebud and Influencerbit
-                  — led product development and design across multiple startups.
-                  Recently shipped AI Invoive Generator (100+ daily users), an
-                  WEB AI TOOL, and several micro-builds, keeping the shipping
-                  momentum going.
+                  My journey started with a curiosity for building software and
+                  solving problems through code. Along the way, I gained
+                  professional experience as a Backend Developer Intern and App
+                  Developer Intern, while also co-founding{" "}
+                  <a
+                    href="https://hanzalatafzeel.github.io/broscodes/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={aboutPageStyles.contentLink}
+                  >
+                    Broscodes
+                  </a>{" "}
+                  with friends. Through Broscodes, I get to turn ideas into real
+                  digital products while working across development, product
+                  decisions, deployment, and everything in between.
                 </p>
               </section>
 
-              {/* Vision */}
+              {/* What I'm Building */}
               <section>
-                <h2 className={aboutPageStyles.sectionHeading}>Vision</h2>
+                <h2 className={aboutPageStyles.sectionHeading}>
+                  What I&apos;m Building
+                </h2>
+
                 <p className={aboutPageStyles.paragraph}>
-                  LLMs and AI will automate the mundane and reshape how we work.
-                  I strive to stay at the forefront of this transformation.
+                  I&apos;m particularly interested in AI engineering, LLM
+                  applications, backend architecture, and developer-focused
+                  products. My recent projects include an AI-powered
+                  multilingual lesson generator, an industrial carbon auditing
+                  platform, and a full-stack website builder.
+                </p>
+              </section>
+
+              {/* Education */}
+              <section>
+                <h2 className={aboutPageStyles.sectionHeading}>Education</h2>
+
+                <p className={aboutPageStyles.paragraph}>
+                  Currently pursuing a B.Tech in Computer Science and
+                  Engineering at Maharaja Agrasen Institute of Technology
+                  (MAIT), with a CGPA of 9.1/10. Previously completed a Diploma
+                  in Computer Science and Engineering from Jamia Millia Islamia
+                  with a CGPA of 9.2/10.
                 </p>
               </section>
 
               {/* Beyond Code */}
               <section>
                 <h2 className={aboutPageStyles.sectionHeading}>Beyond Code</h2>
+
                 <p className={aboutPageStyles.paragraph}>
-                  Love techno & house music, follow F1 (Max), play chess, and
-                  read regularly. Travelled recently to Bali, and a month in
-                  Thailand/Vietnam in 2025.
+                  Outside of development, I enjoy music, following Formula 1,
+                  travelling, and continuously learning new technologies. I also
+                  enjoy working on side projects and experimenting with ideas
+                  around AI and software engineering.
                 </p>
               </section>
             </div>
+
             <div className={aboutPageStyles.ctaContainer}>
               <Link
                 href="/contact"
@@ -139,7 +180,7 @@ export default function AboutPage() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 00-2 2z"
                   />
                 </svg>
                 E-Mail
